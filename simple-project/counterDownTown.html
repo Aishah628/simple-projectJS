@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+        .styles{
+            margin: 30px;
+            padding: 50px;
+            border-radius: 12px;
+            border: none;
+
+            
+        }
+        .total, .days ,.hours ,.mins,.secs {
+            background-color: rgb(218, 153, 235);
+            border: none;
+            width: 30px;
+            height: 30px;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div class="styles">
+    <input class="total" >
+
+    <input class="days" >
+    <input class="hours" >
+    <input class="mins">
+    <input class="secs">
+    <button onclick=countdown();>
+    </div>
+    
+    <script>
+       const endDate='nov 27 2025';
+       var total=document.querySelector('.total');
+       var days=document.querySelector('.days');
+       var hours=document.querySelector('.hours');
+       var mins=document.querySelector('.mins');
+       var secs=document.querySelector('.secs');
+      
+       function countdown(){
+         total=Date.parse(endDate)- new Date();
+            days=Math.floor(total/(1000*60*60*24));
+            hours=Math.floor((total/(1000*60*60)%24));
+            mins= Math.floor((total/1000/60)%60);
+            secs=Math.floor((total/1000)%60);
+         return{
+           days,
+            hours,
+            mins,
+            secs 
+        };
+       }
+           
+       function update(){
+        const temp=countdown();
+        let output='';
+        for(const property in temp){
+            output+=(`${property}: ${temp[property]}`);
+        }
+        console.log(output);
+        setTimeout(update,1000);
+        days.value;
+        hours.value;
+        mins.value;
+        secs.value;
+       }
+        update();
+        </script>
+    
+</body>
+</html>
