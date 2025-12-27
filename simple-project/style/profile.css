@@ -1,0 +1,95 @@
+/* Import Google Fonts - Montserrat and Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(/images/bg3.jpg)#030728 no-repeat center;
+}
+.card-list .card-item {
+    color: #fff;
+    background: rgba(255,255,255,0.2) ;
+    user-select: none;
+    padding: 35px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: blur(30px);
+}
+.card-list .card-item .user-image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom:40px ;
+    border: 3px solid #fff;
+    padding: 4px;
+
+}
+.card-list .card-item .user-profession{
+font-size: 1.5rem;
+color: #e3e3e3;
+font-weight: 500;
+margin: 14px 0 40px;
+}
+.card-list .card-item .message-button{
+    font-size: 1.25rem;
+    padding: 10px 35px;
+    color:  #030728 ;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background: #fff;
+    transition: 0.2s ease;
+
+}
+.card-list .card-item .message-button:hover{
+   border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.1);  
+    color: #fff;
+}
+.slider-wrapper{
+    overflow: visible;
+    max-width: 1200px;
+    margin: 0 70px 55px;
+    height: 600px;
+}
+.swiper-wrapper {
+    display: flex;
+   }
+
+.slider-wrapper .swiper-pagination{
+    background: #fff;
+    height: 15px;
+    width: 15px;
+
+}
+.swiper-button-next,
+.swiper-button-prev {
+    margin-top: -50px;
+    transition: 0.2s ease;
+    color: #fff;
+    z-index: 10;
+}
+.slider-wrapper .swiper-navBtn .swiper-navBtn:hover{
+    color: #4658ff;
+}
+
+@media (max-width:768px) {
+    .slider-wrapper{
+        margin: 0 10px 40px ;
+    }
+    .slider-wrapper .swiper-navBtn .swiper-navBtn{
+        display: visible;
+    }
+}
